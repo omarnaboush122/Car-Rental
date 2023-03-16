@@ -1,10 +1,11 @@
+import Navbar from "./components/Navbar";
 
 
 const App = () => {
   return (
-    <div>
-      car rental
-    </div>
+    <>
+      <Navbar/>
+    </>
   );
 }
 
