@@ -103,7 +103,7 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <ul className="flex gap-8 font-Rubik text-lg">
+        <ul className="flex items-center gap-8 font-Rubik text-lg">
           <li>
             <Link
               to="/"
