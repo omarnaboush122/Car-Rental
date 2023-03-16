@@ -38,7 +38,7 @@ const Navbar = () => {
       >
         <div
           onClick={closeNav}
-          className="absolute top-8 right-8 text-3xl cursor-pointer transition-colors duration-300 hover:text-Red"
+          className="absolute top-[35px] right-[35px] text-3xl cursor-pointer transition-colors duration-300 hover:text-Red"
         >
           <i className="fa-solid fa-xmark"></i>
         </div>
