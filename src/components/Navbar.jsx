@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="flex justify-between items-center w-full h-auto p-8 mx-auto absolute top-0 left-0 right-0 z-50 lg:hidden">
+      <div className="flex justify-between items-center w-full h-auto py-6 px-8 mx-auto absolute top-0 left-0 right-0 z-50 lg:hidden">
         <div className="w-40">
           <Link to="/">
             <img
@@ -93,7 +93,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="hidden lg:flex justify-between items-center w-full h-auto p-8 mx-auto absolute top-0 left-0 right-0 z-50">
+      <div className="hidden lg:flex justify-between items-center w-full h-auto py-6 px-8 mx-auto absolute top-0 left-0 right-0 z-50">
         <div className="w-40">
           <Link to="/">
             <img
@@ -153,7 +153,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <div className="flex items-center gap-5 font-Rubik text-lg font-medium">
+        <div className="flex items-center gap-6 font-Rubik text-lg font-medium">
           <Link
             to="/"
             className="text-Black font-medium transition-colors duration-300 hover:text-Red"
