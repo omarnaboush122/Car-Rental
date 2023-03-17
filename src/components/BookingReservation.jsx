@@ -1,8 +1,17 @@
-const BookingReservation = () => {
+const BookingReservation = ({
+  setIsReservationSuccess,
+  setIsFieldsCorrect,
+}) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="bg-[#fff] text-Black w-full flex flex-col h-screen fixed top-[50%] left-[50%] pr-[2px] border-2 border-solid border-[#fff] overflow-x-hidden -translate-x-[50%] -translate-y-[50%] z-[999]">
       <div className="bg-Red text-[#fff] text-2xl font-bold flex justify-between items-center py-3 px-4">
-        <h2 className="uppercase">complete reservation</h2>
+        <h2 onClick={() => setIsFieldsCorrect(false)} className="uppercase">
+          complete reservation
+        </h2>
         <i className="fa-solid fa-xmark cursor-pointer"></i>
       </div>
       <div className="bg-[#ffeae6] flex flex-col gap-4 py-5 px-8">
@@ -79,66 +88,106 @@ const BookingReservation = () => {
         <h3 className="text-Red text-lg font-bold mb-5 uppercase">
           personal information
         </h3>
-        <form className="flex flex-col">
+        <form onSubmit={handleSubmit} className="flex flex-col">
           <div className="grid grid-cols-1 gap-5 py-3">
             <div className="flex flex-col gap-1">
               <label htmlFor="firstName" className="text-[#777] font-medium">
                 First Name <b className="text-Red">*</b>
               </label>
-              <input type="text" id="firstName" placeholder="Enter your first name" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <input
+                type="text"
+                id="firstName"
+                placeholder="Enter your first name"
+                className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none"
+              />
               <p className="text-xs">This field is required</p>
             </div>
             <div className="flex flex-col gap-1">
               <label htmlFor="lastName" className="text-[#777] font-medium">
                 Last Name <b className="text-Red">*</b>
               </label>
-              <input type="text" id="lastName" placeholder="Enter your last name" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <input
+                type="text"
+                id="lastName"
+                placeholder="Enter your last name"
+                className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none"
+              />
               <p className="text-xs">This field is required</p>
             </div>
             <div className="flex flex-col gap-1">
               <label htmlFor="phoneNumber" className="text-[#777] font-medium">
                 Phone Number <b className="text-Red">*</b>
               </label>
-              <input type="tel" id="phoneNumber" placeholder="Enter your phone number" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <input
+                type="tel"
+                id="phoneNumber"
+                placeholder="Enter your phone number"
+                className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none"
+              />
               <p className="text-xs">This field is required</p>
             </div>
             <div className="flex flex-col gap-1">
               <label htmlFor="age" className="text-[#777] font-medium">
                 Age <b className="text-Red">*</b>
               </label>
-              <input type="tel" id="age" placeholder="Enter your age" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <input
+                type="tel"
+                id="age"
+                placeholder="Enter your age"
+                className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none"
+              />
               <p className="text-xs">This field is required</p>
             </div>
           </div>
           <div className="grid grid-cols-1 gap-5 py-3">
-          <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1">
               <label htmlFor="email" className="text-[#777] font-medium">
                 Email <b className="text-Red">*</b>
               </label>
-              <input type="text" id="email" placeholder="Enter your email address" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <input
+                type="text"
+                id="email"
+                placeholder="Enter your email address"
+                className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none"
+              />
               <p className="text-xs">This field is required</p>
             </div>
             <div className="flex flex-col gap-1">
               <label htmlFor="address" className="text-[#777] font-medium">
                 Address <b className="text-Red">*</b>
               </label>
-              <input type="text" id="address" placeholder="Enter your street address" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <input
+                type="text"
+                id="address"
+                placeholder="Enter your street address"
+                className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none"
+              />
               <p className="text-xs">This field is required</p>
             </div>
           </div>
           <div className="grid grid-cols-1 gap-5 py-3">
-          <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1">
               <label htmlFor="city" className="text-[#777] font-medium">
                 City <b className="text-Red">*</b>
               </label>
-              <input type="text" id="city" placeholder="Enter your city" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <input
+                type="text"
+                id="city"
+                placeholder="Enter your city"
+                className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none"
+              />
               <p className="text-xs">This field is required</p>
             </div>
             <div className="flex flex-col gap-1">
               <label htmlFor="zipCode" className="text-[#777] font-medium">
                 Zip Code <b className="text-Red">*</b>
               </label>
-              <input type="text" id="zipCode" placeholder="Enter your zip code" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <input
+                type="text"
+                id="zipCode"
+                placeholder="Enter your zip code"
+                className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none"
+              />
               <p className="text-xs">This field is required</p>
             </div>
           </div>
@@ -147,7 +196,16 @@ const BookingReservation = () => {
             <label htmlFor="news">Please send me latest news and updates</label>
           </div>
           <div className="bg-[#dbdbdb] -mx-8 p-8 text-center">
-            <button type="submit" className="bg-Red text-[#fff] text-2xl font-bold py-3 px-6 border border-solid border-[#ff0] transition-colors duration-300 hover:bg-[#fe3516]">Reserve Now</button>
+            <button
+              onClick={() => {
+                setIsReservationSuccess(true);
+                setIsFieldsCorrect(false);
+              }}
+              type="submit"
+              className="bg-Red text-[#fff] text-2xl font-bold py-3 px-6 border border-solid border-[#ff0] transition-colors duration-300 hover:bg-[#fe3516]"
+            >
+              Reserve Now
+            </button>
           </div>
         </form>
       </div>

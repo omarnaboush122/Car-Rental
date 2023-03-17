@@ -12,6 +12,7 @@ const Booking = () => {
 
   const [isAllFieldsCorrect, setIsFieldsCorrect] = useState(false);
   const [isAllFieldsWrong, setIsAllFieldsWrong] = useState(false);
+  const [isReservationSuccess, setIsReservationSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,6 +57,16 @@ const Booking = () => {
                 </div>
               )}
 
+              {isReservationSuccess && (
+                <div className="flex items-center justify-between bg-[#c3fabe] text-[#2a6817] font-bold -mt-3 mb-5 p-4 rounded-lg border-none">
+                  Check your email to confirm an order.
+                  <i
+                    className="fa-solid fa-xmark cursor-pointer"
+                    onClick={() => setIsReservationSuccess(false)}
+                  ></i>
+                </div>
+              )}
+              
               <form
                 onSubmit={handleSubmit}
                 className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
@@ -167,7 +178,12 @@ const Booking = () => {
           </div>
         </div>
       </section>
-      <BookingReservation/>
+      {isAllFieldsCorrect && (
+        <BookingReservation
+          setIsReservationSuccess={setIsReservationSuccess}
+          setIsFieldsCorrect={setIsFieldsCorrect}
+        />
+      )}
     </>
   );
 };
