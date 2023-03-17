@@ -43,6 +43,9 @@ const Booking = () => {
   return (
     <>
       <section className="booking-section relative">
+        {isAllFieldsCorrect && (
+          <div className="bg-[rgba(0,0,0,.3)] w-full h-full fixed top-0 right-0 z-[99]"></div>
+        )}
         <div className="max-w-[1480px] mx-auto px-8">
           <div className="mx-auto mb-24">
             <article className="book-car relative flex flex-col bg-[#fff] text-Black w-full py-10 px-6 h-auto rounded-md shadow-lg z-10 sm:p-12">
