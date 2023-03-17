@@ -16,6 +16,51 @@ const BookingReservation = () => {
           Your rental voucher to produce on arrival at the rental desk and a toll-free customer support number.
           </p>
       </div>
+      <div className="grid grid-cols-1 text-center bg-[#fff] p-8 border border-solid border-[hsla(0,0%,47%,.624)]">
+        <div className="flex flex-col gap-8">
+          <div>
+            <h4 className="text-Red text-xl font-bold mb-5">Location & Date</h4>
+            <div className="flex justify-center items-center gap-3">
+              <i className="fa-solid fa-location-dot hidden"></i>
+              <div>
+                <h5 className="font-bold mb-1">Pick-Up Date & Time</h5>
+                <p className="text-[#777]">
+                2023-03-02 / <input type="time" className="w-24 text-center cursor-pointer border" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="flex justify-center items-center gap-3">
+              <i className="fa-solid fa-location-dot hidden"></i>
+              <div>
+                <h5 className="font-bold mb-1">Drop-Off Date & Time</h5>
+                <p className="text-[#777]">
+                2023-03-25 / <input type="time" className="w-24 text-center cursor-pointer border" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="flex justify-center items-center gap-3">
+              <i className="fa-solid fa-calendar-days hidden"></i>
+              <div>
+                <h5 className="font-bold mb-1">Pick-Up Location</h5>
+                <p className="text-[#777]">Nis</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="flex justify-center items-center gap-3">
+              <i className="fa-solid fa-calendar-days hidden"></i>
+              <div>
+                <h5 className="font-bold mb-1">Drop-Off Location</h5>
+                <p className="text-[#777]">Belgrade</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
