@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="flex justify-between items-center w-full h-auto py-6 px-8 mx-auto absolute top-0 left-0 right-0 z-50 lg:hidden">
+      <div className="flex justify-between items-center w-full h-auto py-8 px-5 mx-auto absolute top-0 left-0 right-0 z-50 lg:hidden">
         <div className="w-40">
           <Link to="/">
             <img

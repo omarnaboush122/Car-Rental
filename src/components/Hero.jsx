@@ -29,7 +29,7 @@ const Hero = () => {
 
   return (
     <section className="relative bg-[#f8f8f8] w-full h-[97vh] ">
-      <div className="max-w-[1330px] mx-auto px-8">
+      <div className="max-w-[1480px] mx-auto px-5">
         <img
           src="./images/hero/hero-bg.png"
           alt="hero"
