@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BookingReservation from "./BookingReservation";
 
 const Booking = () => {
   const [input, setInput] = useState({
@@ -166,6 +167,7 @@ const Booking = () => {
           </div>
         </div>
       </section>
+      <BookingReservation/>
     </>
   );
 };
