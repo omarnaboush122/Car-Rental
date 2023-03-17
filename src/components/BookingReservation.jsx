@@ -16,7 +16,7 @@ const BookingReservation = () => {
           Your rental voucher to produce on arrival at the rental desk and a toll-free customer support number.
           </p>
       </div>
-      <div className="grid grid-cols-1 text-center bg-[#fff] p-8 border border-solid border-[hsla(0,0%,47%,.624)]">
+      <div className="grid grid-cols-1 text-center bg-[#fff] p-8 border-2 border-solid border-[hsla(0,0%,47%,.624)]">
         <div className="flex flex-col gap-8">
           <div>
             <h4 className="text-Red text-xl font-bold mb-5">Location & Date</h4>
@@ -59,6 +59,13 @@ const BookingReservation = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="flex flex-col gap-8 mt-9">
+          <h4 className="text-Red text-lg font-bold">
+            <span className="text-Black">Car -</span>
+            VW Passat CC
+          </h4>
+          <img src="./images/cars-big/passatcc.jpg" alt="car-img" />
         </div>
       </div>
     </div>
