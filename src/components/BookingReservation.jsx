@@ -110,6 +110,38 @@ const BookingReservation = () => {
               <p className="text-xs">This field is required</p>
             </div>
           </div>
+          <div className="grid grid-cols-1 gap-5 py-3">
+          <div className="flex flex-col gap-1">
+              <label htmlFor="email" className="text-[#777] font-medium">
+                Email <b className="text-Red">*</b>
+              </label>
+              <input type="text" id="email" placeholder="Enter your email address" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <p className="text-xs">This field is required</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label htmlFor="address" className="text-[#777] font-medium">
+                Address <b className="text-Red">*</b>
+              </label>
+              <input type="text" id="address" placeholder="Enter your street address" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <p className="text-xs">This field is required</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-5 py-3">
+          <div className="flex flex-col gap-1">
+              <label htmlFor="city" className="text-[#777] font-medium">
+                City <b className="text-Red">*</b>
+              </label>
+              <input type="text" id="city" placeholder="Enter your city" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <p className="text-xs">This field is required</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label htmlFor="zipCode" className="text-[#777] font-medium">
+                Zip Code <b className="text-Red">*</b>
+              </label>
+              <input type="text" id="zipCode" placeholder="Enter your zip code" className="bg-[#dbdbdb] text-[#555] text-sm font-medium p-4 border-none outline-none" />
+              <p className="text-xs">This field is required</p>
+            </div>
+          </div>
         </form>
       </div>
     </div>
