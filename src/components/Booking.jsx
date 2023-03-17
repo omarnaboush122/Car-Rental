@@ -1,7 +1,25 @@
 import { useState } from "react";
 
 const Booking = () => {
-  
+  const [input, setInput] = useState({
+    carType: "",
+    pickUpLocation: "",
+    dropOfLocation: "",
+    pickUpDate: "",
+    dropOfDate: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setInput({
+      ...input,
+      [name]: value,
+    });
+  };
+
+  console.log(input);
+
   return (
     <section className="booking-section relative">
       <div className="max-w-[1480px] mx-auto px-8">
@@ -16,11 +34,13 @@ const Booking = () => {
                   <b className="text-Red">*</b>
                 </label>
                 <select
-                  name="type"
                   id="type"
                   className="text-[#ababab] p-3 rounded font-Rubik border border-solid border-[#ccd7e6] outline-none"
+                  name="carType"
+                  value={input.carType}
+                  onChange={handleChange}
                 >
-                  <option selected>Select Your car Type</option>
+                  <option>Select Your car Type</option>
                   <option value="Audi A1 S-Line">Audi A1 S-Line</option>
                   <option value="VW Golf 6">VW Golf 6</option>
                   <option value="Toyota Camry">Toyota Camry</option>
@@ -36,11 +56,13 @@ const Booking = () => {
                   <b className="text-Red">*</b>
                 </label>
                 <select
-                  name="pick-location"
-                  id="pick-location"
+                  id="pickUpLocation"
                   className="text-[#ababab] p-3 rounded font-Rubik border border-solid border-[#ccd7e6] outline-none"
+                  name="pickUpLocation"
+                  value={input.pickUpLocation}
+                  onChange={handleChange}
                 >
-                  <option selected>Select pick up location</option>
+                  <option>Select pick up location</option>
                   <option>Belgrade</option>
                   <option>Novi Sad</option>
                   <option>Nis</option>
@@ -55,11 +77,13 @@ const Booking = () => {
                   <b className="text-Red">*</b>
                 </label>
                 <select
-                  name="drop-location"
                   id="drop-location"
                   className="text-[#ababab] p-3 rounded font-Rubik border border-solid border-[#ccd7e6] outline-none"
+                  name="dropOfLocation"
+                  value={input.dropOfLocation}
+                  onChange={handleChange}
                 >
-                  <option selected>Select drop off location</option>
+                  <option>Select drop off location</option>
                   <option>Belgrade</option>
                   <option>Novi Sad</option>
                   <option>Nis</option>
@@ -75,9 +99,11 @@ const Booking = () => {
                 </label>
                 <input
                   type="date"
-                  name="pick-date"
                   id="pick-date"
                   className="text-[#878585] p-3 border border-solid border-[#ccd7e6] outline-none"
+                  name="pickUpDate"
+                  value={input.pickUpDate}
+                  onChange={handleChange}
                 />
               </div>
               <div className="flex flex-col">
@@ -88,9 +114,11 @@ const Booking = () => {
                 </label>
                 <input
                   type="date"
-                  name="drop-date"
                   id="drop-date"
                   className="text-[#878585] p-3 border border-solid border-[#ccd7e6] outline-none"
+                  name="dropOfDate"
+                  value={input.dropOfDate}
+                  onChange={handleChange}
                 />
               </div>
               <button
