@@ -9,6 +9,9 @@ const Booking = () => {
     dropOfDate: "",
   });
 
+  const [isAllFieldsCorrect, setIsFieldsCorrect] = useState(false);
+  const [isAllFieldsWrong, setIsAllFieldsWrong] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -18,15 +21,42 @@ const Booking = () => {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      input.carType &&
+      input.pickUpLocation &&
+      input.dropOfLocation &&
+      input.pickUpDate &&
+      input.dropOfDate
+    ) {
+      setIsFieldsCorrect(true);
+      setIsAllFieldsWrong(false);
+    } else {
+      setIsFieldsCorrect(false);
+      setIsAllFieldsWrong(true);
+    }
+  };
+
   console.log(input);
 
   return (
     <section className="booking-section relative">
       <div className="max-w-[1480px] mx-auto px-8">
         <div className="mx-auto mb-24">
-          <article className="book-car relative flex flex-col bg-[#fff] text-Black w-full h-auto p-12 rounded-md shadow-lg z-10">
+          <article className="book-car relative flex flex-col bg-[#fff] text-Black w-full py-10 px-6 h-auto rounded-md shadow-lg z-10 sm:p-12">
             <h2 className=" text-3xl font-bold mb-7">Book a Car</h2>
-            <form className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {isAllFieldsWrong && (
+              <div className="flex items-center justify-between bg-[#f8d7da] text-[#721c24] font-bold -mt-3 mb-5 p-4 rounded-lg border-none">
+                All fields required!
+                <i className="fa-solid fa-xmark cursor-pointer"></i>
+              </div>
+            )}
+
+            <form
+              onSubmit={handleSubmit}
+              className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+            >
               <div className="flex flex-col">
                 <label htmlFor="type" className="font-bold mb-3">
                   <i className="fa-solid fa-car text-Red"></i>
