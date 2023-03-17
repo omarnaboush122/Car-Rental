@@ -1,6 +1,6 @@
 const BookingReservation = ({
   setIsReservationSuccess,
-  setIsFieldsCorrect,
+  setIsAllFieldsCorrect,
 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -9,10 +9,10 @@ const BookingReservation = ({
   return (
     <div className="bg-[#fff] text-Black w-full flex flex-col h-screen fixed top-[50%] left-[50%] pr-[2px] border-2 border-solid border-[#fff] overflow-x-hidden -translate-x-[50%] -translate-y-[50%] z-[999]">
       <div className="bg-Red text-[#fff] text-2xl font-bold flex justify-between items-center py-3 px-4">
-        <h2 onClick={() => setIsFieldsCorrect(false)} className="uppercase">
+        <h2 className="uppercase">
           complete reservation
         </h2>
-        <i className="fa-solid fa-xmark cursor-pointer"></i>
+        <i className="fa-solid fa-xmark cursor-pointer" onClick={() => setIsAllFieldsCorrect(false)}></i>
       </div>
       <div className="bg-[#ffeae6] flex flex-col gap-4 py-5 px-8">
         <h3 className="text-Red text-xl font-bold">

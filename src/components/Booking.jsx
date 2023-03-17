@@ -10,7 +10,7 @@ const Booking = () => {
     dropOfDate: "",
   });
 
-  const [isAllFieldsCorrect, setIsFieldsCorrect] = useState(false);
+  const [isAllFieldsCorrect, setIsAllFieldsCorrect] = useState(false);
   const [isAllFieldsWrong, setIsAllFieldsWrong] = useState(false);
   const [isReservationSuccess, setIsReservationSuccess] = useState(false);
 
@@ -32,10 +32,10 @@ const Booking = () => {
       input.pickUpDate &&
       input.dropOfDate
     ) {
-      setIsFieldsCorrect(true);
+      setIsAllFieldsCorrect(true);
       setIsAllFieldsWrong(false);
     } else {
-      setIsFieldsCorrect(false);
+      setIsAllFieldsCorrect(false);
       setIsAllFieldsWrong(true);
     }
   };
@@ -66,7 +66,7 @@ const Booking = () => {
                   ></i>
                 </div>
               )}
-              
+
               <form
                 onSubmit={handleSubmit}
                 className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
@@ -181,7 +181,7 @@ const Booking = () => {
       {isAllFieldsCorrect && (
         <BookingReservation
           setIsReservationSuccess={setIsReservationSuccess}
-          setIsFieldsCorrect={setIsFieldsCorrect}
+          setIsAllFieldsCorrect={setIsAllFieldsCorrect}
         />
       )}
     </>
