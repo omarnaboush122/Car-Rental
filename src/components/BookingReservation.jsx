@@ -142,6 +142,13 @@ const BookingReservation = () => {
               <p className="text-xs">This field is required</p>
             </div>
           </div>
+          <div className="flex items-center gap-3 mt-5 mb-8 text-[#565454]">
+            <input type="checkbox" id="news" className="w-4 h-4" />
+            <label htmlFor="news">Please send me latest news and updates</label>
+          </div>
+          <div className="bg-[#dbdbdb] -mx-8 p-8 text-center">
+            <button type="submit" className="bg-Red text-[#fff] text-2xl font-bold py-3 px-6 border border-solid border-[#ff0] transition-colors duration-300 hover:bg-[#fe3516]">Reserve Now</button>
+          </div>
         </form>
       </div>
     </div>
