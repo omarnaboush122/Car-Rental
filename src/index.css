@@ -24,3 +24,14 @@ body {
   background-color: #fff;
   border-radius: 5px;
 }
+
+.booking-section {
+  background: linear-gradient(180deg,#f8f8f8 20%,#fff 80%);
+}
+
+.book-car {
+  background-image: url("../public/images/book-car/book-bg.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
