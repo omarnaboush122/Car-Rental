@@ -2,6 +2,7 @@
 
 const cars = {
   audi: {
+    name:  "Audi A1 S-Line",
     img: "audia1",
     price: 45,
     model: "Audi",
@@ -11,6 +12,7 @@ const cars = {
     fuel: "Gasoline",
   },
   golf: {
+    name: "VW Golf 6",
     img: "golf6",
     price: 37,
     model: "golf6",
@@ -20,6 +22,7 @@ const cars = {
     fuel: "Diesel",
   },
   toyota: {
+    name: "Toyota Camry",
     img: "toyotacamry",
     price: 30,
     model: "Camry",
@@ -29,6 +32,7 @@ const cars = {
     fuel: "Hybrid",
   },
   bmw: {
+    name: "BMW 320 ModernLine",
     img: "bmw320",
     price: 35,
     model: "320",
@@ -38,6 +42,7 @@ const cars = {
     fuel: "Diesel",
   },
   mercedes: {
+    name: "Mercedes-Benz GLK",
     img: "benz",
     price: 50,
     model: "Benz GLK",
@@ -47,6 +52,7 @@ const cars = {
     fuel: "Diesel",
   },
   passat: {
+    name: "VW Passat CC",
     img: "passatcc",
     price: 25,
     model: "Passat CC",

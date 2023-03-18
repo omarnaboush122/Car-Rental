@@ -9,6 +9,10 @@ const Pick = () => {
     setCarDetails(cars[car] || "");
   }, [car]);
 
+  const handleCarClick = (selectedCar) => {
+    setCar(selectedCar);
+  };
+
   return (
     <section className="py-24">
       <div className="max-w-[1480px] mx-auto px-8">
@@ -25,54 +29,17 @@ const Pick = () => {
           </div>
           <div className="flex flex-col justify-between gap-12 xl:flex-row xl:gap-2">
             <article className="flex flex-col gap-3">
-              <button
-                className={`${
-                  car === "audi" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
-                } text-xl font-bold py-[15px] px-[25px] border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
-                onClick={() => setCar("audi")}
-              >
-                Audi A1 S-Line
-              </button>
-              <button
-                className={`${
-                  car === "golf" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
-                } text-xl font-bold py-[15px] px-[25px] border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
-                onClick={() => setCar("golf")}
-              >
-                VW Golf 6
-              </button>
-              <button
-                className={`${
-                  car === "toyota" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
-                } text-xl font-bold py-[15px] px-[25px] border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
-                onClick={() => setCar("toyota")}
-              >
-                Toyota Camry
-              </button>
-              <button
-                className={`${
-                  car === "bmw" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
-                } text-xl font-bold py-[15px] px-[25px] border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
-                onClick={() => setCar("bmw")}
-              >
-                BMW 320 ModernLine
-              </button>
-              <button
-                className={`${
-                  car === "mercedes" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
-                } text-xl font-bold py-[15px] px-[25px] border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
-                onClick={() => setCar("mercedes")}
-              >
-                Mercedes-Benz GLK
-              </button>
-              <button
-                className={`${
-                  car === "passat" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
-                } text-xl font-bold py-[15px] px-[25px] border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
-                onClick={() => setCar("passat")}
-              >
-                VW Passat CC
-              </button>
+              {Object.keys(cars).map((carType) => (
+                <button
+                  key={carType}
+                  className={`${
+                    car === carType ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
+                  } text-xl font-bold py-[15px] px-[25px] border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
+                  onClick={() => handleCarClick(carType)}
+                >
+                  {cars[carType].name}
+                </button>
+              ))}
             </article>
             <article className="flex flex-col justify-center items-center gap-12 md:flex-row md:justify-between md:items-start md:gap-5 xl:gap-32">
               <div className="relative md:w-[600px]">
@@ -90,55 +57,29 @@ const Pick = () => {
                   / rent per day
                 </div>
                 <div className="grid grid-cols-1">
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
-                    <span className="border-r-2 border-solid border-[#706f7b]">
-                      Model
-                    </span>
-                    <span>{carDetails.model}</span>
-                  </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
-                    <span className="border-r-2 border-solid border-[#706f7b]">
-                      Mark
-                    </span>
-                    <span>{carDetails.mark}</span>
-                  </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
-                    <span className="border-r-2 border-solid border-[#706f7b]">
-                      Year
-                    </span>
-                    <span>{carDetails.year}</span>
-                  </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
-                    <span className="border-r-2 border-solid border-[#706f7b]">
-                      Doors
-                    </span>
-                    <span>4/5</span>
-                  </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
-                    <span className="border-r-2 border-solid border-[#706f7b]">
-                      AC
-                    </span>
-                    <span>Yes</span>
-                  </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
-                    <span className="border-r-2 border-solid border-[#706f7b]">
-                      Transmission
-                    </span>
-                    <span>{carDetails.transmission}</span>
-                  </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
-                    <span className="border-r-2 border-solid border-[#706f7b]">
-                      Fuel
-                    </span>
-                    <span>{carDetails.fuel}</span>
-                  </div>
+                  {Object.keys(carDetails).map((detail) => {
+                    if (detail !== "img" && detail !== "name") {
+                      return (
+                        <div
+                          key={detail}
+                          className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0"
+                        >
+                          <span className="border-r-2 border-solid border-[#706f7b]">
+                            {detail}
+                          </span>
+                          <span>{carDetails[detail]}</span>
+                        </div>
+                      );
+                    }
+                    return null;
+                  })}
+                  <a
+                    href="#booking"
+                    className="bg-Red text-[#fff] text-xl font-bold flex justify-center w-full p-3 uppercase shadow-md mt-4 transition-colors duration-300 hover:bg-[#e9381d]"
+                  >
+                    reserve now
+                  </a>
                 </div>
-                <a
-                  href="#booking"
-                  className="bg-Red text-[#fff] text-xl font-bold flex justify-center w-full p-3 uppercase shadow-md mt-4 transition-colors duration-300 hover:bg-[#e9381d]"
-                >
-                  reserve now
-                </a>
               </div>
             </article>
           </div>
