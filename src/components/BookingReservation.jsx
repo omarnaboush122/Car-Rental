@@ -13,28 +13,16 @@ const BookingReservation = ({
   };
 
   useEffect(() => {
-    switch (input.carType) {
-      case "Audi A1 S-Line":
-        setCarImg("audia1");
-        break;
-      case "VW Golf 6":
-        setCarImg("golf6");
-        break;
-      case "Toyota Camry":
-        setCarImg("toyotacamry");
-        break;
-      case "BMW 320 ModernLine":
-        setCarImg("bmw320");
-        break;
-      case "Mercedes-Benz GLK":
-        setCarImg("benz");
-        break;
-      case "VW Passat CC":
-        setCarImg("passatcc");
-        break;
-      default:
-        setCarImg("");
-    }
+    const carImages = {
+      "Audi A1 S-Line": "audia1",
+      "VW Golf 6": "golf6",
+      "Toyota Camry": "toyotacamry",
+      "BMW 320 ModernLine": "bmw320",
+      "Mercedes-Benz GLK": "benz",
+      "VW Passat CC": "passatcc",
+    };
+
+    setCarImg(carImages[input.carType] || "");
   }, [input.carType]);
 
   const reverseCar = () => {

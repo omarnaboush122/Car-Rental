@@ -68,6 +68,12 @@ const Pick = () => {
                 VW Passat CC
               </button>
             </article>
+            <article className="flex justify-between gap-5">
+              <div className="relative w-[500px]">
+                <img src="./images/cars-big/audia1.jpg" alt="car-img" />
+              </div>
+              <div></div>
+            </article>
           </div>
         </div>
       </div>
