@@ -1,3 +1,4 @@
+import Banner from "../components/Banner";
 import Booking from "../components/Booking";
 import Hero from "../components/Hero";
 import Pick from "../components/Pick";
@@ -10,6 +11,7 @@ const Home = () => {
       <Booking />
       <Plan />
       <Pick />
+      <Banner />
     </main>
   );
 };
