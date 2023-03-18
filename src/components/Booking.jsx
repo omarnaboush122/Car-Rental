@@ -42,7 +42,7 @@ const Booking = () => {
 
   return (
     <>
-      <section className="booking-section relative">
+      <section id="booking" className="booking-section relative">
         {isAllFieldsCorrect && (
           <div className="bg-[rgba(0,0,0,.3)] w-full h-full fixed top-0 right-0 z-[99]"></div>
         )}

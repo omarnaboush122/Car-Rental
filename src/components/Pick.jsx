@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const Pick = () => {
   const [car, setCar] = useState("audi");
@@ -82,50 +81,50 @@ const Pick = () => {
                   <span className="text-3xl font-bold">$45</span> / rent per day
                 </div>
                 <div className="grid grid-cols-1">
-                  <div className="grid grid-cols-2 py-3 px-2 text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Model
                     </span>
                     <span>Audi</span>
                   </div>
-                  <div className="grid grid-cols-2 py-3 px-2 text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Mark
                     </span>
                     <span>A1</span>
                   </div>
-                  <div className="grid grid-cols-2 py-3 px-2 text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Year
                     </span>
                     <span>2012</span>
                   </div>
-                  <div className="grid grid-cols-2 py-3 px-2 text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Doors
                     </span>
                     <span>4/5</span>
                   </div>
-                  <div className="grid grid-cols-2 py-3 px-2 text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       AC
                     </span>
                     <span>Yes</span>
                   </div>
-                  <div className="grid grid-cols-2 py-3 px-2 text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Transmission
                     </span>
                     <span>Manual</span>
                   </div>
-                  <div className="grid grid-cols-2 py-3 px-2 text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Fuel
                     </span>
                     <span>Gasoline</span>
                   </div>
                 </div>
-                <Link className="bg-Red text-[#fff] text-lg font-bold flex justify-center w-full p-3 uppercase shadow-md mt-3">reserve now</Link>
+                <a href="#booking" className="bg-Red text-[#fff] text-lg font-bold flex justify-center w-full p-3 uppercase shadow-md mt-4">reserve now</a>
               </div>
             </article>
           </div>
