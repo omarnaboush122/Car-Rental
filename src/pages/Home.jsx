@@ -1,5 +1,6 @@
 import Booking from "../components/Booking";
 import Hero from "../components/Hero";
+import Pick from "../components/Pick";
 import Plan from "../components/Plan";
 
 const Home = () => {
@@ -7,7 +8,8 @@ const Home = () => {
     <main>
       <Hero />
       <Booking />
-      <Plan/>
+      <Plan />
+      <Pick />
     </main>
   );
 };
