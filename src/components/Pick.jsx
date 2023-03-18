@@ -58,16 +58,16 @@ const Pick = () => {
                 </div>
                 <div className="grid grid-cols-1">
                   {Object.keys(carDetails).map((detail) => {
-                    if (detail !== "img" && detail !== "name") {
+                    if (detail !== "img" && detail !== "name" && detail !== "price") {
                       return (
                         <div
                           key={detail}
                           className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0"
                         >
-                          <span className="border-r-2 border-solid border-[#706f7b]">
+                          <span className="border-r-2 border-solid border-[#706f7b] capitalize">
                             {detail}
                           </span>
-                          <span>{carDetails[detail]}</span>
+                          <span className="capitalize">{carDetails[detail]}</span>
                         </div>
                       );
                     }
