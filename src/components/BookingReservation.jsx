@@ -1,9 +1,52 @@
+import { useEffect, useState } from "react";
+
 const BookingReservation = ({
   setIsReservationSuccess,
   setIsAllFieldsCorrect,
+  input,
+  setInput,
 }) => {
+  const [carImg, setCarImg] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+  };
+
+  useEffect(() => {
+    switch (input.carType) {
+      case "Audi A1 S-Line":
+        setCarImg("audia1");
+        break;
+      case "VW Golf 6":
+        setCarImg("golf6");
+        break;
+      case "Toyota Camry":
+        setCarImg("toyotacamry");
+        break;
+      case "BMW 320 ModernLine":
+        setCarImg("bmw320");
+        break;
+      case "Mercedes-Benz GLK":
+        setCarImg("benz");
+        break;
+      case "VW Passat CC":
+        setCarImg("passatcc");
+        break;
+      default:
+        setCarImg("");
+    }
+  }, [input.carType]);
+
+  const reverseCar = () => {
+    setIsReservationSuccess(true);
+    setIsAllFieldsCorrect(false);
+    setInput({
+      carType: "",
+      pickUpLocation: "",
+      dropOfLocation: "",
+      pickUpDate: "",
+      dropOfDate: "",
+    });
   };
 
   return (
@@ -34,7 +77,7 @@ const BookingReservation = ({
               <div>
                 <h5 className="font-bold mb-1">Pick-Up Date & Time</h5>
                 <p className="text-[#777]">
-                  2023-03-02 /{" "}
+                  {input.pickUpDate} /{" "}
                   <input
                     type="time"
                     className="w-24 text-center cursor-pointer border"
@@ -49,7 +92,7 @@ const BookingReservation = ({
               <div>
                 <h5 className="font-bold mb-1">Drop-Off Date & Time</h5>
                 <p className="text-[#777]">
-                  2023-03-25 /{" "}
+                  {input.dropOfDate} /{" "}
                   <input
                     type="time"
                     className="w-24 text-center cursor-pointer border"
@@ -63,7 +106,7 @@ const BookingReservation = ({
               <i className="fa-solid fa-calendar-days hidden md:block text-[#777] text-lg"></i>
               <div>
                 <h5 className="font-bold mb-1">Pick-Up Location</h5>
-                <p className="text-[#777]">Nis</p>
+                <p className="text-[#777]">{input.pickUpLocation}</p>
               </div>
             </div>
           </div>
@@ -72,7 +115,7 @@ const BookingReservation = ({
               <i className="fa-solid fa-calendar-days hidden md:block text-[#777] text-lg"></i>
               <div>
                 <h5 className="font-bold mb-1">Drop-Off Location</h5>
-                <p className="text-[#777]">Belgrade</p>
+                <p className="text-[#777]">{input.dropOfLocation}</p>
               </div>
             </div>
           </div>
@@ -80,9 +123,13 @@ const BookingReservation = ({
         <div className="flex flex-col gap-8 mt-9">
           <h4 className="text-Red text-lg font-bold">
             <span className="text-Black">Car -</span>
-            VW Passat CC
+            {input.carType}
           </h4>
-          <img src="./images/cars-big/passatcc.jpg" alt="car-img" className="w-full h-auto" />
+          <img
+            src={`./images/cars-big/${carImg}.jpg`}
+            alt="car-img"
+            className="w-full h-auto"
+          />
         </div>
       </div>
       <div className="bg-[#fff] flex flex-col p-8">
@@ -198,10 +245,7 @@ const BookingReservation = ({
           </div>
           <div className="bg-[#dbdbdb] -mx-8 p-8 text-center">
             <button
-              onClick={() => {
-                setIsReservationSuccess(true);
-                setIsAllFieldsCorrect(false);
-              }}
+              onClick={reverseCar}
               type="submit"
               className="bg-Red text-[#fff] text-2xl font-bold py-3 px-6 border border-solid border-[#ff0] transition-colors duration-300 hover:bg-[#fe3516]"
             >

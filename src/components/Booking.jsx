@@ -112,11 +112,11 @@ const Booking = () => {
                     onChange={handleChange}
                   >
                     <option>Select pick up location</option>
-                    <option>Belgrade</option>
-                    <option>Novi Sad</option>
-                    <option>Nis</option>
-                    <option>Kragujevac</option>
-                    <option>Subotica</option>
+                    <option>Tripoli</option>
+                    <option>Beirut</option>
+                    <option>Baalbeck</option>
+                    <option>Zahle</option>
+                    <option>Sidon</option>
                   </select>
                 </div>
                 <div className="flex flex-col">
@@ -133,11 +133,11 @@ const Booking = () => {
                     onChange={handleChange}
                   >
                     <option>Select drop off location</option>
-                    <option>Belgrade</option>
-                    <option>Novi Sad</option>
-                    <option>Nis</option>
-                    <option>Kragujevac</option>
-                    <option>Subotica</option>
+                    <option>Tripoli</option>
+                    <option>Beirut</option>
+                    <option>Baalbeck</option>
+                    <option>Zahle</option>
+                    <option>Sidon</option>
                   </select>
                 </div>
                 <div className="flex flex-col">
@@ -185,6 +185,8 @@ const Booking = () => {
         <BookingReservation
           setIsReservationSuccess={setIsReservationSuccess}
           setIsAllFieldsCorrect={setIsAllFieldsCorrect}
+          input={input}
+          setInput={setInput}
         />
       )}
     </>
