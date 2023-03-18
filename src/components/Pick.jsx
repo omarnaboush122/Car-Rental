@@ -1,7 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Pick = () => {
   const [car, setCar] = useState("audi");
+  const [carImg, setCarImg] = useState("");
+
+  useEffect(() => {
+    const carImages = {
+      audi: "audia1",
+      golf: "golf6",
+      toyota: "toyotacamry",
+      bmw: "bmw320",
+      mercedes: "benz",
+      passat: "passatcc",
+    };
+
+    setCarImg(carImages[car]);
+  }, [car]);
 
   return (
     <section className="py-24">
@@ -17,7 +31,7 @@ const Pick = () => {
               next adventure or business trip
             </p>
           </div>
-          <div className="flex flex-col justify-between gap-12 lg:flex-row lg:gap-2">
+          <div className="flex flex-col justify-between gap-12 xl:flex-row xl:gap-2">
             <article className="flex flex-col gap-3">
               <button
                 className={`${
@@ -71,7 +85,7 @@ const Pick = () => {
             <article className="flex flex-col justify-center items-center gap-12 md:flex-row md:justify-between md:items-start md:gap-5 xl:gap-32">
               <div className="relative md:w-[600px]">
                 <img
-                  src="./images/cars-big/audia1.jpg"
+                  src={`./images/cars-big/${carImg}.jpg`}
                   alt="car-img"
                   className="w-full mt-14"
                 />
@@ -124,7 +138,12 @@ const Pick = () => {
                     <span>Gasoline</span>
                   </div>
                 </div>
-                <a href="#booking" className="bg-Red text-[#fff] text-lg font-bold flex justify-center w-full p-3 uppercase shadow-md mt-4">reserve now</a>
+                <a
+                  href="#booking"
+                  className="bg-Red text-[#fff] text-lg font-bold flex justify-center w-full p-3 uppercase shadow-md mt-4"
+                >
+                  reserve now
+                </a>
               </div>
             </article>
           </div>
