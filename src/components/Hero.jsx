@@ -36,7 +36,7 @@ const Hero = () => {
           className="hidden md:block absolute right-0 top-0 z-10"
         />
         <div className="relative flex justify-center items-center h-screen w-full md:justify-start">
-          <article className="flex flex-col items-center text-center mt-14 max-w-lg z-10 md:text-start md:items-start">
+          <article className="flex flex-col items-center text-center mt-14 max-w-lg z-[99] md:text-start md:items-start">
             <h3 className="text-Black font-Rubik text-2xl font-bold">
               Plan your trip now
             </h3>
