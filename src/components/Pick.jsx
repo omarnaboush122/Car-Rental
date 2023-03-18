@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const Pick = () => {
+  const [car, setCar] = useState("audi");
+
   return (
     <section className="py-24">
       <div className="max-w-[1480px] mx-auto px-8">
@@ -15,22 +19,52 @@ const Pick = () => {
           </div>
           <div className="flex flex-col justify-between gap-12">
             <article className="flex flex-col gap-2">
-              <button className="bg-[#e9e9e9] text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]">
+              <button
+                className={`${
+                  car === "audi" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
+                } text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
+                onClick={() => setCar("audi")}
+              >
                 Audi A1 S-Line
               </button>
-              <button className="bg-[#e9e9e9] text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]">
+              <button
+                className={`${
+                  car === "golf" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
+                } text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
+                onClick={() => setCar("golf")}
+              >
                 VW Golf 6
               </button>
-              <button className="bg-[#e9e9e9] text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]">
+              <button
+                className={`${
+                  car === "toyota" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
+                } text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
+                onClick={() => setCar("toyota")}
+              >
                 Toyota Camry
               </button>
-              <button className="bg-[#e9e9e9] text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]">
+              <button
+                className={`${
+                  car === "bmw" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
+                } text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
+                onClick={() => setCar("bmw")}
+              >
                 BMW 320 ModernLine
               </button>
-              <button className="bg-[#e9e9e9] text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]">
+              <button
+                className={`${
+                  car === "mercedes" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
+                } text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
+                onClick={() => setCar("mercedes")}
+              >
                 Mercedes-Benz GLK
               </button>
-              <button className="bg-[#e9e9e9] text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]">
+              <button
+                className={`${
+                  car === "passat" ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
+                } text-xl font-bold py-3 px-6 border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
+                onClick={() => setCar("passat")}
+              >
                 VW Passat CC
               </button>
             </article>
