@@ -1,20 +1,68 @@
 import { useState, useEffect } from "react";
 
 const Pick = () => {
+  const allCars = {
+    audi: {
+      img: "audia1",
+      price: 45,
+      model: "Audi",
+      mark: "A1",
+      year: "2012",
+      transmission: "Manual",
+      fuel: "Gasoline",
+    },
+    golf: {
+      img: "golf6",
+      price: 37,
+      model: "golf6",
+      mark: "Volkswagen",
+      year: "2008",
+      transmission: "Manual",
+      fuel: "Diesel",
+    },
+    toyota: {
+      img: "toyotacamry",
+      price: 30,
+      model: "Camry",
+      mark: "Toyota",
+      year: "2006",
+      transmission: "Automatic",
+      fuel: "Hybrid",
+    },
+    bmw: {
+      img: "bmw320",
+      price: 35,
+      model: "320",
+      mark: "BMW",
+      year: "2012",
+      transmission: "Manual",
+      fuel: "Diesel",
+    },
+    mercedes: {
+      img: "benz",
+      price: 50,
+      model: "Benz GLK",
+      mark: "Mercedes",
+      year: "2006",
+      transmission: "Manual",
+      fuel: "Diesel",
+    },
+    passat: {
+      img: "passatcc",
+      price: 25,
+      model: "Passat CC",
+      mark: "Volkswagen",
+      year: "2008",
+      transmission: "Automatic",
+      fuel: "Gasoline",
+    },
+  };
+
   const [car, setCar] = useState("audi");
-  const [carImg, setCarImg] = useState("");
+  const [carDetails, setCarDetails] = useState(allCars[car]);
 
   useEffect(() => {
-    const carImages = {
-      audi: "audia1",
-      golf: "golf6",
-      toyota: "toyotacamry",
-      bmw: "bmw320",
-      mercedes: "benz",
-      passat: "passatcc",
-    };
-
-    setCarImg(carImages[car]);
+    setCarDetails(allCars[car] || "");
   }, [car]);
 
   return (
@@ -85,62 +133,65 @@ const Pick = () => {
             <article className="flex flex-col justify-center items-center gap-12 md:flex-row md:justify-between md:items-start md:gap-5 xl:gap-32">
               <div className="relative md:w-[600px]">
                 <img
-                  src={`./images/cars-big/${carImg}.jpg`}
+                  src={`./images/cars-big/${carDetails.img}.jpg`}
                   alt="car-img"
                   className="w-full mt-14"
                 />
               </div>
               <div className="w-64">
                 <div className="bg-Red text-[#fff] w-full flex items-center gap-3 text-lg py-2 px-5 whitespace-nowrap">
-                  <span className="text-3xl font-bold">$45</span> / rent per day
+                  <span className="text-3xl font-bold">
+                    ${carDetails.price}
+                  </span>{" "}
+                  / rent per day
                 </div>
                 <div className="grid grid-cols-1">
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Model
                     </span>
-                    <span>Audi</span>
+                    <span>{carDetails.model}</span>
                   </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Mark
                     </span>
-                    <span>A1</span>
+                    <span>{carDetails.mark}</span>
                   </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Year
                     </span>
-                    <span>2012</span>
+                    <span>{carDetails.year}</span>
                   </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Doors
                     </span>
                     <span>4/5</span>
                   </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       AC
                     </span>
                     <span>Yes</span>
                   </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Transmission
                     </span>
-                    <span>Manual</span>
+                    <span>{carDetails.transmission}</span>
                   </div>
-                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-sm text-center border-2 border-solid border-[#706f7b] border-t-0">
+                  <div className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0">
                     <span className="border-r-2 border-solid border-[#706f7b]">
                       Fuel
                     </span>
-                    <span>Gasoline</span>
+                    <span>{carDetails.fuel}</span>
                   </div>
                 </div>
                 <a
                   href="#booking"
-                  className="bg-Red text-[#fff] text-lg font-bold flex justify-center w-full p-3 uppercase shadow-md mt-4"
+                  className="bg-Red text-[#fff] text-xl font-bold flex justify-center w-full p-3 uppercase shadow-md mt-4 transition-colors duration-300 hover:bg-[#e9381d]"
                 >
                   reserve now
                 </a>
