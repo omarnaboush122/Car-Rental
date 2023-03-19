@@ -44,3 +44,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.faq {
+  background-image: url("../public/images/faq/car.png");
+  background-position: 0% 70%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
