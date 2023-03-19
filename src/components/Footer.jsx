@@ -2,13 +2,13 @@ const Footer = () => {
   return (
     <footer className="bg-[#fff] py-24">
       <div className="max-w-[1480px] mx-auto px-8">
-        <div className="grid grid-cols-1 text-Black justify-center gap-20">
-          <ul className="text-center">
+        <div className="grid grid-cols-1 text-Black justify-center gap-20 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="text-center sm:text-left">
             <li className="text-2xl mb-4">
               <span className="font-bold uppercase">car </span>
               Rental
             </li>
-            <li className="text-[#706f7b] text-lg mb-8">
+            <li className="text-[#706f7b] mb-8">
               We offers a big range of vehicles for all your driving needs. We
               have the perfect car to meet your needs.
             </li>
@@ -21,33 +21,87 @@ const Footer = () => {
               </a>
             </li>
             <li className="font-Rubik font-medium mb-3">
-              <a href="mailto: carrental@gmail.com" className="text-Black transition-colors duration-300 hover:text-Red">
+              <a
+                href="mailto: carrental@gmail.com"
+                className="text-Black transition-colors duration-300 hover:text-Red"
+              >
                 <i className="fa-solid fa-envelope"></i>
                 &nbsp; carrental@gmail.com
               </a>
             </li>
             <li>
-              <a href="https://xpeedstudio.com/" target="_blank">
+              <a
+                href="https://xpeedstudio.com/"
+                target="_blank"
+                className="text-Black transition-colors duration-300 hover:text-Red"
+              >
                 Design by XpeedStudio
               </a>
             </li>
           </ul>
-          <ul className="text-center flex flex-col gap-3">
+          <ul className="flex flex-col gap-3 text-center sm:text-left">
             <li className="text-2xl font-bold uppercase">Company</li>
             <li>
-              <a href="#home" className="text-Black transition-colors duration-300 hover:text-Red">New York</a>
+              <a
+                href="#home"
+                className="text-Black transition-colors duration-300 hover:text-Red"
+              >
+                New York
+              </a>
             </li>
             <li>
-              <a href="#home" className="text-Black transition-colors duration-300 hover:text-Red">Careers</a>
+              <a
+                href="#home"
+                className="text-Black transition-colors duration-300 hover:text-Red"
+              >
+                Careers
+              </a>
             </li>
             <li>
-              <a href="#home" className="text-Black transition-colors duration-300 hover:text-Red">Mobile</a>
+              <a
+                href="#home"
+                className="text-Black transition-colors duration-300 hover:text-Red"
+              >
+                Mobile
+              </a>
             </li>
             <li>
-              <a href="#home" className="text-Black transition-colors duration-300 hover:text-Red">Blog</a>
+              <a
+                href="#home"
+                className="text-Black transition-colors duration-300 hover:text-Red"
+              >
+                Blog
+              </a>
             </li>
             <li>
-              <a href="#home" className="text-Black transition-colors duration-300 hover:text-Red">How we work</a>
+              <a
+                href="#home"
+                className="text-Black transition-colors duration-300 hover:text-Red"
+              >
+                How we work
+              </a>
+            </li>
+          </ul>
+          <ul className="flex flex-col gap-3 text-center sm:text-left">
+            <li className="text-2xl font-bold uppercase">working hours</li>
+            <li>Mon - Fri: 9:00AM - 9:00PM</li>
+            <li>Sat: 9:00AM - 19:00PM</li>
+            <li>Sun: Closed</li>
+          </ul>
+          <ul className="flex flex-col gap-3 text-center sm:text-left">
+            <li className="text-2xl font-bold uppercase">Subscription</li>
+            <li>Subscribe your Email address for latest news & updates.</li>
+            <li>
+              <input
+                type="email"
+                placeholder="Enter Email Address"
+                className="bg-[#ececec] w-full py-3 px-12 font-Rubik border-none outline-none"
+              />
+            </li>
+            <li>
+              <button className="bg-Red text-[#fff] w-full py-3 px-6 text-lg font-bold border-2 border-solid border-Red cursor-pointer shadow-md transition-all duration-300 hover:bg-[#fa4226] hover:shadow-lg">
+                Submit
+              </button>
             </li>
           </ul>
         </div>
