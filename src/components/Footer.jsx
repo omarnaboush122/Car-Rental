@@ -95,11 +95,11 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter Email Address"
-                className="bg-[#ececec] w-full py-3 px-12 font-Rubik border-none outline-none"
+                className="bg-[#ececec] w-full py-3 px-14 font-Rubik rounded border-none outline-none"
               />
             </li>
             <li>
-              <button className="bg-Red text-[#fff] w-full py-3 px-6 text-lg font-bold border-2 border-solid border-Red cursor-pointer shadow-md transition-all duration-300 hover:bg-[#fa4226] hover:shadow-lg">
+              <button className="bg-Red text-[#fff] w-full py-3 px-6 text-lg font-bold border-2 border-solid border-Red rounded cursor-pointer shadow-md transition-all duration-300 hover:bg-[#fa4226] hover:shadow-lg">
                 Submit
               </button>
             </li>
