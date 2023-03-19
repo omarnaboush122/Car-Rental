@@ -39,8 +39,15 @@ const Faq = () => {
                   <p className="text-lg font-medium">{question.title}</p>
                   <i className="fa-solid fa-angle-down text-xl"></i>
                 </div>
+
                 {activeQuestionIndex === i && (
-                  <p className="text-[#706f7b] bg-[#fff] text-lg font-Rubik py-7 px-11 transition-all duration-300 ease-linear">
+                  <p
+                    className={`${
+                      activeQuestionIndex === i
+                        ? "max-h-[550px] sm:max-h-[250px]"
+                        : "max-h-0"
+                    } text-[#706f7b] bg-[#fff] text-lg font-Rubik py-7 px-11 transition-all duration-300 ease-in-out`}
+                  >
                     {question.content}
                   </p>
                 )}
