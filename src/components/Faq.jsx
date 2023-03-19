@@ -40,7 +40,7 @@ const Faq = () => {
                   <i className="fa-solid fa-angle-down text-xl"></i>
                 </div>
                 {activeQuestionIndex === i && (
-                  <p className="text-[#706f7b] text-lg font-Rubik max-h-52 py-7 px-11 overflow-hidden transition-all duration-300 ease-linear">
+                  <p className="text-[#706f7b] bg-[#fff] text-lg font-Rubik py-7 px-11 transition-all duration-300 ease-linear">
                     {question.content}
                   </p>
                 )}
