@@ -1,7 +1,12 @@
 import { useState } from "react";
 import questions from "../data/QuestionsData";
+
 const Faq = () => {
-  const [activeQuestion, setActiveQuestion] = useState(null);
+  const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
+
+  const handleQuestionClick = (index) => {
+    setActiveQuestionIndex(index === activeQuestionIndex ? null : index);
+  };
 
   return (
     <section className="faq py-24">
@@ -21,15 +26,24 @@ const Faq = () => {
             {questions.map((question, i) => (
               <article
                 key={i}
-                className="bg-[#fff] text-Black w-full shadow-md cursor-pointer transition-all duration-200 md:w-[800px]"
+                className="w-full shadow-md cursor-pointer transition-all duration-200 md:w-[800px]"
+                onClick={() => handleQuestionClick(i)}
               >
-                <div className="flex justify-between items-center py-6 px-11 shadow-md">
+                <div
+                  className={`${
+                    activeQuestionIndex === i
+                      ? "bg-Red text-[#fff]"
+                      : "bg-[#fff] text-Black"
+                  } flex justify-between items-center py-6 px-11 shadow-md`}
+                >
                   <p className="text-lg font-medium">{question.title}</p>
                   <i className="fa-solid fa-angle-down text-xl"></i>
                 </div>
-                <p className="text-[#706f7b] text-lg font-Rubik max-h-52 py-7 px-11 overflow-hidden">
-                  {question.content}
-                </p>
+                {activeQuestionIndex === i && (
+                  <p className="text-[#706f7b] text-lg font-Rubik max-h-52 py-7 px-11 overflow-hidden transition-all duration-300 ease-linear">
+                    {question.content}
+                  </p>
+                )}
               </article>
             ))}
           </div>
