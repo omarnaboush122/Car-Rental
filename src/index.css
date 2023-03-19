@@ -51,3 +51,11 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
 }
+
+@media (min-width: 768px) {
+  .download {
+    background-image: url("../public/images/banners/bg02.png");
+    background-position: top;
+    background-size: cover;
+  }
+}

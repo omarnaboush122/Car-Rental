@@ -36,7 +36,7 @@ const Faq = () => {
                       : "bg-[#fff] text-Black"
                   } flex justify-between items-center py-6 px-11 shadow-md`}
                 >
-                  <p className="text-lg font-medium">{question.title}</p>
+                  <h3 className="text-xl font-medium">{question.title}</h3>
                   <i className="fa-solid fa-angle-down text-xl"></i>
                 </div>
 

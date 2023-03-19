@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import Booking from "../components/Booking";
 import ChooseUs from "../components/Choose-us";
+import Download from "../components/Download";
 import Faq from "../components/Faq";
 import Hero from "../components/Hero";
 import Pick from "../components/Pick";
@@ -17,7 +18,8 @@ const Home = () => {
       <Banner />
       <ChooseUs />
       <Testimonials />
-      <Faq/>
+      <Faq />
+      <Download />
     </main>
   );
 };
