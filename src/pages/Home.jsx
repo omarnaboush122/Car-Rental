@@ -4,6 +4,7 @@ import ChooseUs from "../components/Choose-us";
 import Hero from "../components/Hero";
 import Pick from "../components/Pick";
 import Plan from "../components/Plan";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   return (
@@ -13,7 +14,8 @@ const Home = () => {
       <Plan />
       <Pick />
       <Banner />
-      <ChooseUs/>
+      <ChooseUs />
+      <Testimonials />
     </main>
   );
 };
