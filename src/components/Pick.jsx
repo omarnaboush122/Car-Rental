@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import cars from "../CarsDetails";
+import cars from "../data/CarsDetails";
 
 const Pick = () => {
   const [car, setCar] = useState("audi");

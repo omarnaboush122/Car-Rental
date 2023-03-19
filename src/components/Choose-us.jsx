@@ -1,4 +1,19 @@
+import features from "../data/Features";
+
 const ChooseUs = () => {
+  const allFeatures = features.map((feature, i) => (
+    <div
+      key={i}
+      className="flex flex-col items-center sm:flex-row sm:items-start"
+    >
+      <img src={feature.imageSrc} alt="icon-img" className="w-28 h-28 mr-3" />
+      <div className="flex flex-col justify-center gap-3">
+        <h3 className="text-2xl font-bold">{feature.title}</h3>
+        <p className="text-[#706f7b] font-Rubik">{feature.description}</p>
+      </div>
+    </div>
+  ));
+
   return (
     <section className="choose bg-[#fff] pt-5 pb-24">
       <div className="max-w-[1480px] mx-auto px-8">
@@ -33,48 +48,7 @@ const ChooseUs = () => {
               </a>
             </article>
             <article className="flex flex-col gap-11 max-w-[440px]">
-              <div className="flex flex-col items-center sm:flex-row sm:items-start">
-                <img
-                  src="./images/chooseUs/icon1.png"
-                  alt="icon-img"
-                  className="w-28 h-28 mr-3"
-                />
-                <div className="flex flex-col justify-center gap-3">
-                  <h3 className="text-2xl font-bold">Cross Country Drive</h3>
-                  <p className="text-[#706f7b] font-Rubik">
-                    Take your driving experience to the next level with our
-                    top-notch vehicles for your cross-country adventures.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col items-center sm:flex-row sm:items-start">
-                <img
-                  src="./images/chooseUs/icon2.png"
-                  alt="icon-img"
-                  className="w-28 h-28 mr-3"
-                />
-                <div className="flex flex-col justify-center gap-3">
-                  <h3 className="text-2xl font-bold">All Inclusive Pricing</h3>
-                  <p className="text-[#706f7b] font-Rubik">
-                    Get everything you need in one convenient, transparent price
-                    with our all-inclusive pricing policy.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col items-center sm:flex-row sm:items-start">
-                <img
-                  src="./images/chooseUs/icon3.png"
-                  alt="icon-img"
-                  className="w-28 h-28 mr-3"
-                />
-                <div className="flex flex-col justify-center gap-3">
-                  <h3 className="text-2xl font-bold">No Hidden Charges</h3>
-                  <p className="text-[#706f7b] font-Rubik">
-                    Enjoy peace of mind with our no hidden charges policy. We
-                    believe in transparent and honest pricing.
-                  </p>
-                </div>
-              </div>
+              {allFeatures}
             </article>
           </div>
         </div>
