@@ -65,3 +65,7 @@ body {
   background-image: url("../public/images/hero/heroes-bg.png");
   background-position: 50%;
 }
+
+.book {
+  background-image: url("../public/images/banners/book-banner.png");
+}
