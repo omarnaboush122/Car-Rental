@@ -6,7 +6,9 @@ const ContactForm = () => {
       <div className="max-w-[1480px] mx-auto px-8">
         <div className="contact grid grid-cols-1 gap-8 mx-auto py-24 px-5 text-Black text-center lg:grid-cols-2 lg:text-left">
           <article className="flex flex-col gap-3 w-[410px] mx-auto mb-5 lg:m-0">
-            <h2 className="text-5xl font-bold mb-5">Need additional information?</h2>
+            <h2 className="text-5xl font-bold mb-5">
+              Need additional information?
+            </h2>
             <p className="text-[#706f7b] font-Rubik mb-5 md:text-lg">
               A multifaceted professional skilled in multiple fields of
               research, development as well as a learning specialist. Over 15
@@ -48,7 +50,7 @@ const ContactForm = () => {
                 className="bg-[#f2f2f2] py-4 px-8 mb-6 border-none outline-none"
               />
               <label htmlFor="textarea" className="text-lg font-bold mb-3">
-                Email
+                Tell us about it
                 <b className="text-Red">*</b>
               </label>
               <textarea
