@@ -69,3 +69,10 @@ body {
 .book {
   background-image: url("../public/images/banners/book-banner.png");
 }
+
+.contact {
+  background-image: url("../public/images/banners/bg-contact.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
