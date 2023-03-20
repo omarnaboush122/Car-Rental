@@ -1,4 +1,4 @@
-const BookBanner = () => {
+const Contact = () => {
   return (
     <section className="book flex h-52 mt-20 relative w-full">
       <div className="bg-[#2d2d2d] w-full h-full absolute top-0 right-0 opacity-90"></div>
@@ -17,4 +17,4 @@ const BookBanner = () => {
   );
 };
 
-export default BookBanner;
+export default Contact;

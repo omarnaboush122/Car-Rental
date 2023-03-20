@@ -1,5 +1,5 @@
 import AboutCompany from "../components/About-Company";
-import BookBanner from "../components/BookBanner";
+import Contact from "../components/Contact";
 import Intro from "../components/Intro";
 import Plan from "../components/Plan";
 
@@ -9,7 +9,7 @@ const About = () => {
       <Intro title="About" />
       <AboutCompany />
       <Plan />
-      <BookBanner />
+      <Contact />
     </main>
   );
 };

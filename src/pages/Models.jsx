@@ -1,3 +1,4 @@
+import Contact from "../components/Contact";
 import Intro from "../components/Intro";
 import VehicleModels from "../components/VehicleModels";
 
@@ -6,6 +7,7 @@ const Models = () => {
     <main>
       <Intro title="Vehicle Models" />
       <VehicleModels />
+      <Contact />
     </main>
   );
 };
