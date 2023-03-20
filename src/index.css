@@ -40,7 +40,8 @@ body {
 }
 
 .book-car,
-.choose {
+.choose,
+.intro {
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -58,4 +59,9 @@ body {
     background-position: top;
     background-size: cover;
   }
+}
+
+.intro {
+  background-image: url("../public/images/hero/heroes-bg.png");
+  background-position: 50%;
 }
