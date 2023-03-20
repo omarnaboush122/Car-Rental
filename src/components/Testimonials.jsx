@@ -31,7 +31,7 @@ const Testimonials = () => {
                   />
                   <span>
                     <h4 className="text-lg font-bold">Parry Hotter</h4>
-                    <p className="font-Rubik">Beirut</p>
+                    <p className="font-Rubik">Belgrade</p>
                   </span>
                 </div>
               </div>
@@ -52,7 +52,7 @@ const Testimonials = () => {
                   />
                   <span>
                     <h4 className="text-lg font-bold">Ron Rizzly</h4>
-                    <p className="font-Rubik">Tripoli</p>
+                    <p className="font-Rubik">Novi Sad</p>
                   </span>
                 </div>
               </div>
