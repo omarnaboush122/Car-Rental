@@ -30,12 +30,12 @@ body {
 }
 
 .book-car {
-  background-image: url("../public/images/book-car/book-bg.png");
+  background-image: url("../images/book-car/book-bg.png");
   background-position: 50%;
 }
 
 .choose {
-  background-image: url("../public/images/chooseUs/bg.png");
+  background-image: url("../images/chooseUs/bg.png");
   background-position: -225px 255px;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .faq {
-  background-image: url("../public/images/faq/car.png");
+  background-image: url("../images/faq/car.png");
   background-position: 0% 70%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -55,23 +55,23 @@ body {
 
 @media (min-width: 768px) {
   .download {
-    background-image: url("../public/images/banners/bg02.png");
+    background-image: url("../images/banners/bg02.png");
     background-position: top;
     background-size: cover;
   }
 }
 
 .intro {
-  background-image: url("../public/images/hero/heroes-bg.png");
+  background-image: url("../images/hero/heroes-bg.png");
   background-position: 50%;
 }
 
 .book {
-  background-image: url("../public/images/banners/book-banner.png");
+  background-image: url("../images/banners/book-banner.png");
 }
 
 .contact {
-  background-image: url("../public/images/banners/bg-contact.png");
+  background-image: url("../images/banners/bg-contact.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: auto;
