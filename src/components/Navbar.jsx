@@ -47,6 +47,7 @@ const Navbar = () => {
             <Link
               to="/"
               className="text-Black font-medium transition-colors duration-300 hover:text-Red"
+              onClick={() => setIsNavOpen(false)}
             >
               Home
             </Link>
@@ -55,6 +56,7 @@ const Navbar = () => {
             <Link
               to="/about"
               className="text-Black font-medium transition-colors duration-300 hover:text-Red"
+              onClick={() => setIsNavOpen(false)}
             >
               About
             </Link>
@@ -63,6 +65,7 @@ const Navbar = () => {
             <Link
               to="/models"
               className="text-Black font-medium transition-colors duration-300 hover:text-Red"
+              onClick={() => setIsNavOpen(false)}
             >
               Models
             </Link>
@@ -71,6 +74,7 @@ const Navbar = () => {
             <Link
               to="/testimonials"
               className="text-Black font-medium transition-colors duration-300 hover:text-Red"
+              onClick={() => setIsNavOpen(false)}
             >
               Testimonials
             </Link>
@@ -79,6 +83,7 @@ const Navbar = () => {
             <Link
               to="/our-team"
               className="text-Black font-medium transition-colors duration-300 hover:text-Red"
+              onClick={() => setIsNavOpen(false)}
             >
               Our Team
             </Link>
@@ -87,6 +92,7 @@ const Navbar = () => {
             <Link
               to="/contact"
               className="text-Black font-medium transition-colors duration-300 hover:text-Red"
+              onClick={() => setIsNavOpen(false)}
             >
               Contact
             </Link>
