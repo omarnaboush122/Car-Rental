@@ -1,17 +1,9 @@
 import features from "../data/Features";
+import SingleFeature from "./SingleFeature";
 
 const ChooseUs = () => {
   const allFeatures = features.map((feature, i) => (
-    <div
-      key={i}
-      className="flex flex-col items-center sm:flex-row sm:items-start"
-    >
-      <img src={feature.imageSrc} alt="icon-img" className="w-28 h-28 mr-3" />
-      <div className="flex flex-col justify-center gap-3">
-        <h3 className="text-2xl font-bold">{feature.title}</h3>
-        <p className="text-[#706f7b] font-Rubik">{feature.description}</p>
-      </div>
-    </div>
+    <SingleFeature key={i} {...feature}/>
   ));
 
   return (
