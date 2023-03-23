@@ -1,6 +1,11 @@
 import data from "../../data.json";
+import SinglePlan from "./SinglePlan";
 
 const Plan = () => {
+  const allPlans = data.items.map((item, i) => (
+    <SinglePlan key={i} {...item} />
+  ));
+
   return (
     <section className="bg-[#fff] py-14">
       <div className="max-w-[1480px] mx-auto px-8">
@@ -12,19 +17,7 @@ const Plan = () => {
             </h2>
           </div>
           <div className="grid grid-cols-1 gap-5 px-8 mt-9 md:grid-cols-2 lg:grid-cols-3">
-            {data.items.map((item, i) => (
-              <article key={i} className="p-3 text-center">
-                <img
-                  src={item.icon}
-                  alt="icon-img"
-                  className="w-44 mx-auto h-auto"
-                />
-                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                <p className="text-[#706f7b] font-Rubik max-w-xs mx-auto">
-                  {item.description}
-                </p>
-              </article>
-            ))}
+            {allPlans}
           </div>
         </div>
       </div>
