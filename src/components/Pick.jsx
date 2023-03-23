@@ -13,6 +13,35 @@ const Pick = () => {
     setCar(selectedCar);
   };
 
+  const allCarsTypes = Object.keys(cars).map((carType) => (
+    <button
+      key={carType}
+      className={`${
+        car === carType ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
+      } text-xl font-bold py-[15px] px-[25px] border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
+      onClick={() => handleCarClick(carType)}
+    >
+      {cars[carType].name}
+    </button>
+  ));
+
+  const allCarsDetails = Object.keys(carDetails).map((detail) => {
+    if (detail !== "img" && detail !== "name" && detail !== "price") {
+      return (
+        <div
+          key={detail}
+          className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0"
+        >
+          <span className="border-r-2 border-solid border-[#706f7b] capitalize">
+            {detail}
+          </span>
+          <span className="capitalize">{carDetails[detail]}</span>
+        </div>
+      );
+    }
+    return null;
+  });
+
   return (
     <section className="py-24">
       <div className="max-w-[1480px] mx-auto px-8">
@@ -28,19 +57,7 @@ const Pick = () => {
             </p>
           </div>
           <div className="flex flex-col justify-between gap-12 xl:flex-row xl:gap-2">
-            <article className="flex flex-col gap-3">
-              {Object.keys(cars).map((carType) => (
-                <button
-                  key={carType}
-                  className={`${
-                    car === carType ? "bg-Red text-[#fff]" : "bg-[#e9e9e9]"
-                  } text-xl font-bold py-[15px] px-[25px] border-none cursor-pointer transition-colors duration-300 hover:bg-Red hover:text-[#fff]`}
-                  onClick={() => handleCarClick(carType)}
-                >
-                  {cars[carType].name}
-                </button>
-              ))}
-            </article>
+            <article className="flex flex-col gap-3">{allCarsTypes}</article>
             <article className="flex flex-col justify-center items-center gap-12 md:flex-row md:justify-between md:items-start md:gap-5 xl:gap-32">
               <div className="relative md:w-[600px]">
                 <img
@@ -57,22 +74,7 @@ const Pick = () => {
                   / rent per day
                 </div>
                 <div className="grid grid-cols-1">
-                  {Object.keys(carDetails).map((detail) => {
-                    if (detail !== "img" && detail !== "name" && detail !== "price") {
-                      return (
-                        <div
-                          key={detail}
-                          className="grid grid-cols-2 py-[9px] px-[5px] text-center border-2 border-solid border-[#706f7b] border-t-0"
-                        >
-                          <span className="border-r-2 border-solid border-[#706f7b] capitalize">
-                            {detail}
-                          </span>
-                          <span className="capitalize">{carDetails[detail]}</span>
-                        </div>
-                      );
-                    }
-                    return null;
-                  })}
+                  {allCarsDetails}
                   <a
                     href="#booking"
                     className="bg-Red text-[#fff] text-xl font-bold flex justify-center w-full p-3 uppercase shadow-md mt-4 transition-colors duration-300 hover:bg-[#e9381d]"
